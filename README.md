@@ -10,8 +10,8 @@ In this hands-on tutorial, you'll learn CI/CD concepts by building a real pipeli
 - [x] Automated deployment to GitHub Pages
 - [x] Understanding of CI/CD best practices
 
-**Time Required:** 45-60 minutes  
-**Difficulty:** Beginner  
+**Time Required:** 45-60 minutes  
+**Difficulty:** Beginner  
 **Prerequisites:**
 
 - A GitHub account (free)
@@ -57,51 +57,51 @@ Create a simple HTML website. In your project folder, create the following files
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My CI/CD Project</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My CI/CD Project</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-  <body>
-    <header>
-      <h1>Welcome to My CI/CD Pipeline Project</h1>
-      <p>This website is automatically deployed using GitHub Actions!</p>
-    </header>
+  <body>
+    <header>
+      <h1>Welcome to My CI/CD Pipeline Project</h1>
+      <p>This website is automatically deployed using GitHub Actions!</p>
+    </header>
  
-    <main>
-      <section>
-        <h2>What is CI/CD?</h2>
-        <ul>
-          <li>
-            <strong>Continuous Integration:</strong> Automatically test code
-            when changes are made
-          </li>
-          <li>
-            <strong>Continuous Delivery:</strong> Keep code ready to deploy at
-            any time
-          </li>
-          <li>
-            <strong>Continuous Deployment:</strong> Automatically deploy to
-            production
-          </li>
-        </ul>
-      </section>
+    <main>
+      <section>
+        <h2>What is CI/CD?</h2>
+        <ul>
+          <li>
+            <strong>Continuous Integration:</strong> Automatically test code
+            when changes are made
+          </li>
+          <li>
+            <strong>Continuous Delivery:</strong> Keep code ready to deploy at
+            any time
+          </li>
+          <li>
+            <strong>Continuous Deployment:</strong> Automatically deploy to
+            production
+          </li>
+        </ul>
+      </section>
 
-      <section id="counter">
-        <h2>Deployment Counter</h2>
-        <p class="count">Deployment #1</p>
-        <p class="tip">Update this number each time you deploy!</p>
-      </section>
-    </main>
+      <section id="counter">
+        <h2>Deployment Counter</h2>
+        <p class="count">Deployment #1</p>
+        <p class="tip">Update this number each time you deploy!</p>
+      </section>
+    </main>
 
-    <footer>
-      <p>Built with ❤️ and automated with GitHub Actions</p>
-    </footer>
+    <footer>
+      <p>Built with ❤️ and automated with GitHub Actions</p>
+    </footer>
  
-    <script src="script.js"></script>
-  </body>
+    <script src="script.js"></script>
+  </body>
 </html>
 ```
 
@@ -109,85 +109,85 @@ Create a simple HTML website. In your project folder, create the following files
 
 ```css
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  min-height: 100vh;
-  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
 }
   
 header {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
-  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 header h1 {
-  color: #667eea;
-  margin-bottom: 0.5rem;
+  color: #667eea;
+  margin-bottom: 0.5rem;
 }
 
 main {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 section {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
 }
 
 section h2 {
-  color: #667eea;
-  margin-bottom: 1rem;
+  color: #667eea;
+  margin-bottom: 1rem;
 }
 
 ul {
-  list-style-position: inside;
-  padding-left: 1rem;
+  list-style-position: inside;
+  padding-left: 1rem;
 }
 
 li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
  
 #counter {
-  text-align: center;
+  text-align: center;
 }
 
 .count {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #764ba2;
-  margin: 1rem 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #764ba2;
+  margin: 1rem 0;
 }
   
 .tip {
-  font-style: italic;
-  color: #666;
+  font-style: italic;
+  color: #666;
 }
  
 footer {
-  background: white;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 ```
 
@@ -196,28 +196,28 @@ footer {
 ```javascript
 // Simple script to demonstrate automated testing
 function getCurrentDate() {
-  const date = new Date();
+  const date = new Date();
 
-  return date.toLocaleDateString("en-GB");
+  return date.toLocaleDateString("en-GB");
 }
 
 function updateFooter() {
-  const footer = document.querySelector("footer p");
+  const footer = document.querySelector("footer p");
 
-  if (footer) {
-    footer.innerHTML += ` | Last updated: ${getCurrentDate()}`;
-  }
+  if (footer) {
+    footer.innerHTML += ` | Last updated: ${getCurrentDate()}`;
+  }
 }
 
 // Run when page loads
 document.addEventListener("DOMContentLoaded", () => {
-  updateFooter();
-  console.log("Website loaded successfully! ✅");
+  updateFooter();
+  console.log("Website loaded successfully! ✅");
 });
 
 // Export for testing (if using Node.js testing environment)
 if (typeof module !== "undefined" && module.exports) {
-  module.exports = { getCurrentDate };
+  module.exports = { getCurrentDate };
 }
 ```
 
@@ -286,78 +286,78 @@ const path = require("path");
   
 // Test 1: Check if index.html exists
 function testIndexExists() {
-  const indexPath = path.join(__dirname, "..", "index.html");
+  const indexPath = path.join(__dirname, "..", "index.html");
 
-  if (fs.existsSync(indexPath)) {
-    console.log("✅ PASS: index.html exists");
-    return true;
-  } else {
-    console.log("❌ FAIL: index.html not found");
-    return false;
-  }
+  if (fs.existsSync(indexPath)) {
+    console.log("✅ PASS: index.html exists");
+    return true;
+  } else {
+    console.log("❌ FAIL: index.html not found");
+    return false;
+  }
 }
 
 // Test 2: Check if HTML contains required elements
 function testHTMLContent() {
-  const indexPath = path.join(__dirname, "..", "index.html");
-  const content = fs.readFileSync(indexPath, "utf8");
+  const indexPath = path.join(__dirname, "..", "index.html");
+  const content = fs.readFileSync(indexPath, "utf8");
 
-  const tests = [
-    { name: "Has DOCTYPE", check: content.includes("<!DOCTYPE html>") },
-    { name: "Has title tag", check: content.includes("<title>") },
-    { name: "Has h1 heading", check: content.includes("<h1>") },
-    { name: "Links to CSS", check: content.includes("style.css") },
-    { name: "Links to JavaScript", check: content.includes("script.js") },
-  ];
+  const tests = [
+    { name: "Has DOCTYPE", check: content.includes("<!DOCTYPE html>") },
+    { name: "Has title tag", check: content.includes("<title>") },
+    { name: "Has h1 heading", check: content.includes("<h1>") },
+    { name: "Links to CSS", check: content.includes("style.css") },
+    { name: "Links to JavaScript", check: content.includes("script.js") },
+  ];
 
-  let allPassed = true;
+  let allPassed = true;
 
-  tests.forEach((test) => {
-    if (test.check) {
-      console.log(`✅ PASS: ${test.name}`);
-    } else {
-      console.log(`❌ FAIL: ${test.name}`);
-      allPassed = false;
-    }
-  });
+  tests.forEach((test) => {
+    if (test.check) {
+      console.log(`✅ PASS: ${test.name}`);
+    } else {
+      console.log(`❌ FAIL: ${test.name}`);
+      allPassed = false;
+    }
+  });
 
-  return allPassed;
+  return allPassed;
 }
 
 // Test 3: Check if CSS file exists
 function testCSSExists() {
-  const cssPath = path.join(__dirname, "..", "style.css");
+  const cssPath = path.join(__dirname, "..", "style.css");
 
-  if (fs.existsSync(cssPath)) {
-    console.log("✅ PASS: style.css exists");
-    return true;
-  } else {
-    console.log("❌ FAIL: style.css not found");
-    return false;
-  }
+  if (fs.existsSync(cssPath)) {
+    console.log("✅ PASS: style.css exists");
+    return true;
+  } else {
+    console.log("❌ FAIL: style.css not found");
+    return false;
+  }
 }
 
 // Test 4: Check if JavaScript file exists
 function testJSExists() {
-  const jsPath = path.join(__dirname, "..", "script.js");
+  const jsPath = path.join(__dirname, "..", "script.js");
 
-  if (fs.existsSync(jsPath)) {
-    console.log("✅ PASS: script.js exists");
-    return true;
-  } else {
-    console.log("❌ FAIL: script.js not found");
-    return false;
-  }
+  if (fs.existsSync(jsPath)) {
+    console.log("✅ PASS: script.js exists");
+    return true;
+  } else {
+    console.log("❌ FAIL: script.js not found");
+    return false;
+  }
 }
 
 // Run all tests
 console.log("🧪 Running tests...\n");
 
 const results = [
-  testIndexExists(),
-  testHTMLContent(),
-  testCSSExists(),
-  testJSExists(),
+  testIndexExists(),
+  testHTMLContent(),
+  testCSSExists(),
+  testJSExists(),
 ];
 
 const allTestsPassed = results.every((result) => result === true);
@@ -365,11 +365,11 @@ const allTestsPassed = results.every((result) => result === true);
 console.log("\n" + "=".repeat(50));
 
 if (allTestsPassed) {
-  console.log("✅ All tests passed!");
-  process.exit(0);
+  console.log("✅ All tests passed!");
+  process.exit(0);
 } else {
-  console.log("❌ Some tests failed");
-  process.exit(1);
+  console.log("❌ Some tests failed");
+  process.exit(1);
 }
 ```
 
@@ -377,16 +377,16 @@ if (allTestsPassed) {
 
 ```json
 {
-  "name": "my-cicd-project",
-  "version": "1.0.0",
-  "description": "Learning CI/CD with GitHub Actions",
-  "scripts": {
-    "test": "node tests/test.js",
-    "lint": "echo 'Running HTML validation...' && echo '✅ Linting passed'"
-  },
-  "keywords": ["ci-cd", "github-actions", "tutorial"],
-  "author": "Your Name",
-  "license": "MIT"
+  "name": "my-cicd-project",
+  "version": "1.0.0",
+  "description": "Learning CI/CD with GitHub Actions",
+  "scripts": {
+    "test": "node tests/test.js",
+    "lint": "echo 'Running HTML validation...' && echo '✅ Linting passed'"
+  },
+  "keywords": ["ci-cd", "github-actions", "tutorial"],
+  "author": "Your Name",
+  "license": "MIT"
 }
 ```
 
@@ -431,53 +431,53 @@ name: CI - Continuous Integration
   
 # When should this workflow run?
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 # What jobs should run?
 jobs:
-  test:
-    name: Run Tests
-    runs-on: ubuntu-latest
-    steps:
-      # Step 1: Check out the code
-      - name: Checkout code
-        uses: actions/checkout@v3
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Check out the code
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      # Step 2: Set up Node.js
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "18"
+      # Step 2: Set up Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
 
-      # Step 3: Run tests
-      - name: Run tests
-        run: npm test
+      # Step 3: Run tests
+      - name: Run tests
+        run: npm test
 
-      # Step 4: Run linting
-      - name: Run linting
-        run: npm run lint
+      # Step 4: Run linting
+      - name: Run linting
+        run: npm run lint
 
-  # This job checks for common HTML issues
-  validate-html:
-    name: Validate HTML
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+  # This job checks for common HTML issues
+  validate-html:
+    name: Validate HTML
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - name: Validate HTML
-        run: |
-          echo "Checking HTML files..."
-          if grep -q "<!DOCTYPE html>" index.html; then
-            echo "✅ DOCTYPE found"
-          else
-            echo "❌ DOCTYPE missing"
-            exit 1
-          fi
-          echo "✅ HTML validation passed"
+      - name: Validate HTML
+        run: |
+          echo "Checking HTML files..."
+          if grep -q "<!DOCTYPE html>" index.html; then
+            echo "✅ DOCTYPE found"
+          else
+            echo "❌ DOCTYPE missing"
+            exit 1
+          fi
+          echo "✅ HTML validation passed"
 ```
 
 ### Step 4.2: Understanding the Workflow
@@ -488,15 +488,15 @@ Let's break down what this file does:
 
 - **`on:`** - Triggers: when to run this workflow
 
-  - `push` to `main` branch - runs when you push code
+  - `push` to `main` branch - runs when you push code
 
-  - `pull_request` - runs when someone creates a PR
+  - `pull_request` - runs when someone creates a PR
 
 - **`jobs:`** - What tasks to perform
 
-  - `test` - Runs your automated tests
+  - `test` - Runs your automated tests
 
-  - `validate-html` - Checks HTML structure
+  - `validate-html` - Checks HTML structure
 
 ### Step 4.3: Commit and Push
 
@@ -534,62 +534,62 @@ Let's add automatic deployment - when tests pass, the site automatically deploys
 name: CD - Deploy to GitHub Pages
   
 on:
-  push:
-    branches: [main]
+  push:
+    branches: [main]
  
 # Sets permissions for GitHub Pages deployment
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: read
+  pages: write
+  id-token: write
 
 # Allow only one concurrent deployment
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  # First, run tests (CI)
-  test:
-    name: Run Tests Before Deploy
-    runs-on: ubuntu-latest
+  # First, run tests (CI)
+  test:
+    name: Run Tests Before Deploy
+    runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "18"
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
 
-      - name: Run tests
-        run: npm test
+      - name: Run tests
+        run: npm test
 
-      - name: Run linting
-        run: npm run lint
+      - name: Run linting
+        run: npm run lint
 
-  # Then, deploy to GitHub Pages (CD)
-  deploy:
-    name: Deploy to GitHub Pages
-    runs-on: ubuntu-latest
-    needs: test # Only run if tests pass!
+  # Then, deploy to GitHub Pages (CD)
+  deploy:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    needs: test # Only run if tests pass!
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: "."
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: "."
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
 ```
 
 ### Step 5.2: Update GitHub Pages Settings
@@ -685,23 +685,23 @@ brew install pre-commit
 ```yaml
 # Pre-commit hooks configuration
 repos:
-  # Check for common file issues
-  - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
-    hooks:
-      - id: trailing-whitespace
-      - id: end-of-file-fixer
-      - id: check-yaml
-      - id: check-added-large-files
-      - id: check-json
-      - id: mixed-line-ending
+  # Check for common file issues
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+      - id: check-json
+      - id: mixed-line-ending
 
-  # HTML validation
-  - repo: https://github.com/Lucas-C/pre-commit-hooks-markup
-    rev: v1.0.1
-    hooks:
-      - id: rst-linter
-        exclude: '^(?!.*\.html$).*$'
+  # HTML validation
+  - repo: https://github.com/Lucas-C/pre-commit-hooks-markup
+    rev: v1.0.1
+    hooks:
+      - id: rst-linter
+        exclude: '^(?!.*\.html$).*$'
 ```
 
 ### Step 7.3: Install the Pre-Commit Hooks
@@ -715,7 +715,7 @@ pre-commit install
 Try to commit a file with trailing whitespace:
 
 ```bash
-echo "test with trailing spaces    " >> test.txt
+echo "test with trailing spaces    " >> test.txt
 git add test.txt
 git commit -m "Test pre-commit"
 ```
@@ -747,56 +747,56 @@ You've now built a **complete CI/CD pipeline**! Here's what happens:
 
 ```text
 ┌─────────────────────────────────────────────────────────────┐
-│  DEVELOPER WORKFLOW                                         │
+│  DEVELOPER WORKFLOW                                         │
 ├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  1. Write Code Locally                                      │
-│     ↓                                                       │
-│  2. Pre-Commit Checks Run (Local)                           │
-│     ├─ Check for trailing whitespace                        │
-│     ├─ Validate file formats                                │
-│     └─ Fix common issues                                    │
-│     ↓                                                       │
-│  3. Commit Code                                             │
-│     ↓                                                       │
-│  4. Push to GitHub                                          │
-│                                                             │
+│                                                             │
+│  1. Write Code Locally                                      │
+│     ↓                                                       │
+│  2. Pre-Commit Checks Run (Local)                           │
+│     ├─ Check for trailing whitespace                        │
+│     ├─ Validate file formats                                │
+│     └─ Fix common issues                                    │
+│     ↓                                                       │
+│  3. Commit Code                                             │
+│     ↓                                                       │
+│  4. Push to GitHub                                          │
+│                                                             │
 └─────────────────────────────────────────────────────────────┘
-                          ↓
+                          ↓
 ┌─────────────────────────────────────────────────────────────┐
-│  CONTINUOUS INTEGRATION (GitHub Actions)                    │
+│  CONTINUOUS INTEGRATION (GitHub Actions)                    │
 ├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  5. Trigger CI Workflow                                     │
-│     ├─ Checkout code                                        │
-│     ├─ Set up testing environment                           │
-│     ├─ Run automated tests                                  │
-│     ├─ Run linting                                          │
-│     └─ Validate HTML                                        │
-│     ↓                                                       │
-│  6. Tests Pass? → Continue                                  │
-│     Tests Fail? → Stop and notify developer                 │
-│                                                             │
+│                                                             │
+│  5. Trigger CI Workflow                                     │
+│     ├─ Checkout code                                        │
+│     ├─ Set up testing environment                           │
+│     ├─ Run automated tests                                  │
+│     ├─ Run linting                                          │
+│     └─ Validate HTML                                        │
+│     ↓                                                       │
+│  6. Tests Pass? → Continue                                  │
+│     Tests Fail? → Stop and notify developer                 │
+│                                                             │
 └─────────────────────────────────────────────────────────────┘
-                          ↓
+                          ↓
 ┌─────────────────────────────────────────────────────────────┐
-│  CONTINUOUS DEPLOYMENT (GitHub Actions)                     │
+│  CONTINUOUS DEPLOYMENT (GitHub Actions)                     │
 ├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  7. Trigger CD Workflow (only if tests passed)              │
-│     ├─ Build artifact                                       │
-│     ├─ Configure GitHub Pages                               │
-│     └─ Deploy to production                                 │
-│     ↓                                                       │
-│  8. Website Updated!                                        │
-│                                                             │
+│                                                             │
+│  7. Trigger CD Workflow (only if tests passed)              │
+│     ├─ Build artifact                                       │
+│     ├─ Configure GitHub Pages                               │
+│     └─ Deploy to production                                 │
+│     ↓                                                       │
+│  8. Website Updated!                                        │
+│                                                             │
 └─────────────────────────────────────────────────────────────┘
-                          ↓
-                   ┌─────────────┐
-                   │   USERS     │
-                   │  See Latest │
-                   │   Version   │
-                   └─────────────┘
+                          ↓
+                   ┌─────────────┐
+                   │   USERS     │
+                   │  See Latest │
+                   │   Version   │
+                   └─────────────┘
 ```
 
 ---
@@ -981,17 +981,17 @@ Want to take your CI/CD skills further? Try:
 
 🎉 **Congratulations!** You've successfully:
 
-✅ Created a GitHub repository  
+✅ Created a GitHub repository  
 
-✅ Built a simple website  
+✅ Built a simple website  
 
-✅ Deployed it to GitHub Pages  
+✅ Deployed it to GitHub Pages  
 
-✅ Added automated testing (CI)  
+✅ Added automated testing (CI)  
 
-✅ Implemented automatic deployment (CD)  
+✅ Implemented automatic deployment (CD)  
 
-✅ Added pre-commit checks  
+✅ Added pre-commit checks  
 
 ✅ Understand the complete CI/CD lifecycle
 
