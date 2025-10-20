@@ -444,13 +444,11 @@ jobs:
     steps:
       # Step 1: Check out the code
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
 
       # Step 2: Set up Node.js
       - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "18"
+        uses: actions/setup-node@v6
 
       # Step 3: Run tests
       - name: Run tests
@@ -466,7 +464,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
 
       - name: Validate HTML
         run: |
@@ -556,12 +554,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "18"
+        uses: actions/setup-node@v6
 
       - name: Run tests
         run: npm test
@@ -577,19 +573,19 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
 
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v5
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v4
         with:
           path: "."
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
 ```
 
 ### Step 5.2: Update GitHub Pages Settings
